@@ -1,0 +1,130 @@
+{
+  "categories": [
+    {
+      "id": "gym",
+      "name": "Gym",
+      "exercises": [
+        {
+          "id": "benchpress",
+          "name": "Bench press",
+          "image_files": ["benchpress_photo.jpg", "benchpress_photo_2.jpg"],
+          "video_file": "benchpress-video.mp4",
+          "description": "The bench press builds strength and size in your chest, shoulders, and triceps, while also improving overall upper-body power and posture. It's a staple lift for anyone looking to push heavy weight and is often seen as a true test of raw strength—hence the classic gym question: \"How much do you bench?\" .",
+          "execution": "Lie flat with feet on the ground, shoulder blades tight, and core engaged. Grip the bar just wider than shoulder-width, lower it slowly to your lower chest with elbows at a 45° angle, then press it back up with control. Keep your whole body tight—benching is more than just pushing with your arms.",
+          "jims_tip": "Press till you make it to the press!!"
+        },
+        {
+          "id": "deadlift",
+          "name": "Deadlift",
+          "image_files": ["deadlift_photo.jpg", "deadlift_photo_2.jpg"],
+          "video_file": "deadlift-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "legpress",
+          "name": "Leg Press",
+          "image_files": ["legpress_photo.jpg", "legpress_photo_2.jpg"],
+          "video_file": "legpress-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "squat",
+          "name": "Squat",
+          "image_files": ["squat_photo.jpg", "squat_photo_2.jpg"],
+          "video_file": "squat-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        }
+      ]
+    },
+    {
+      "id": "calisthenics",
+      "name": "Calisthenics",
+      "exercises": [
+        {
+          "id": "dips",
+          "name": "Dips",
+          "image_files": ["dips_photo.jpg", "dips_photo_2.jpg"],
+          "video_file": "dips-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "plank",
+          "name": "Plank",
+          "image_files": ["plank_photo.jpg", "plank_photo_2.jpg"],
+          "video_file": "plank-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "pullup",
+          "name": "Pull-up",
+          "image_files": ["pullup_photo.jpg", "pullup_photo_2.jpg"],
+          "video_file": "pullup-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "pushup",
+          "name": "Push-up",
+          "image_files": ["pushup_photo.jpg", "pushup_photo_2.jpg"],
+          "video_file": "pushup-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        }
+      ]
+    },
+    {
+      "id": "cardio",
+      "name": "Cardio",
+      "exercises": [
+        {
+          "id": "biking",
+          "name": "Biking",
+          "image_files": ["biking_photo.jpg", "biking_photo_2.jpg"],
+          "video_file": "biking-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "hiking",
+          "name": "Hiking",
+          "image_files": ["hiking_photo.jpg", "hiking_photo_2.jpg"],
+          "video_file": "hiking-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "jogging",
+          "name": "Jogging",
+          "image_files": ["jogging_photo.jpg", "jogging_photo_2.jpg"],
+          "video_file": "jogging-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        },
+        {
+          "id": "swimming",
+          "name": "Swimming",
+          "image_files": ["swimming_photo.jpg", "swimming_photo_2.jpg"],
+          "video_file": "swimming-video.mp4",
+          "description": "",
+          "execution": "",
+          "jims_tip": ""
+        }
+      ]
+    }
+  ]
+}
