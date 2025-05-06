@@ -40,16 +40,14 @@ fun MenuItemCard(
                 imageVector = icon,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onPrimary,
-                modifier = Modifier.size(28.dp)
+                modifier = Modifier.size(36.dp)
             )
 
             Spacer(modifier = Modifier.width(16.dp))
 
             Text(
                 text = text,
-                style = MaterialTheme.typography.displayMedium.copy(
-                    fontSize = 24.sp
-                ),
+                style = MaterialTheme.typography.displayLarge,
                 color = MaterialTheme.colorScheme.onPrimary
             )
         }

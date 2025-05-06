@@ -8,5 +8,6 @@ enum class AppScreens(
     @StringRes val titleRes: Int
 ) {
     CategoryMenu("category_menu", R.string.category_menu_title),
-    ExerciseMenu("exercise_menu", R.string.exercise_menu_title);
+    ExerciseMenu("exercise_menu", R.string.exercise_menu_title),
+    Exercise("exercise", R.string.exercise_title);
 }

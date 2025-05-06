@@ -55,8 +55,8 @@ class ExerciseViewModel : ViewModel() {
         }
     }
 
-    fun getCurrentExercise(): String {
-        return exerciseState.value.currentExercise.name;
+    fun getCurrentExercise(): Exercise {
+        return exerciseState.value.currentExercise;
     }
 
 }

@@ -42,7 +42,7 @@ fun ExerciseItemCard(
                 painter = painterResource(id = imageResId),
                 contentDescription = name,
                 modifier = Modifier
-                    .padding(8.dp)
+                    .padding(12.dp)
                     .aspectRatio(1f)
                     .fillMaxWidth(),
                 contentScale = ContentScale.Crop
@@ -53,8 +53,7 @@ fun ExerciseItemCard(
                     .padding(vertical = 8.dp)
                     .fillMaxWidth(),
                 textAlign = TextAlign.Center,
-                fontSize = 16.sp,
-                fontWeight = FontWeight.Medium,
+                style = MaterialTheme.typography.displayMedium,
                 color = MaterialTheme.colorScheme.onPrimary
             )
         }

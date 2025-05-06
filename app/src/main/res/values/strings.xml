@@ -2,6 +2,7 @@
     <string name="app_name">Gym4Jim</string>
     <string name="category_menu_title">Choose Category</string>
     <string name="exercise_menu_title">Choose Exercise</string>
+    <string name="exercise_title">Exercise</string>
     <string name="back_button">Back</string>
 
 </resources>

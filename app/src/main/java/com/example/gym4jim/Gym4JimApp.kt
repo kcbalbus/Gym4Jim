@@ -13,6 +13,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.gym4jim.ui.screens.CategoryMenuScreen
 import com.example.gym4jim.ui.screens.ExerciseMenuScreen
+import com.example.gym4jim.ui.screens.ExerciseScreen
 
 @Composable
 fun Gym4JimApp(
@@ -50,8 +51,13 @@ fun Gym4JimApp(
                     exerciseViewModel = exerciseViewModel,
                     onExerciseSelected = {
                         exerciseViewModel.onExerciseChosen(it)
-                        navController.navigate(AppScreens.ExerciseMenu.route)
+                        navController.navigate(AppScreens.Exercise.route)
                     }
+                )
+            }
+            composable(AppScreens.Exercise.route) {
+                ExerciseScreen(
+                    exerciseViewModel = exerciseViewModel
                 )
             }
         }

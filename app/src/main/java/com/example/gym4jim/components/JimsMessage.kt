@@ -34,28 +34,27 @@ fun JimsMessage(
             contentDescription = "Jim",
             contentScale = ContentScale.Crop,
             modifier = Modifier
-                .size(80.dp)
+                .size(96.dp)
                 .clip(RoundedCornerShape(8.dp))
                 .border(
-                    BorderStroke(2.dp, Color.Black),
-                    shape = RoundedCornerShape(0.dp)
+                    BorderStroke(2.dp, Color.Black)
                 )
         )
 
-        Spacer(modifier = Modifier.width(12.dp))
+        Spacer(modifier = Modifier.width(10.dp))
 
         Surface(
             shape = RoundedCornerShape(16.dp),
             color = MaterialTheme.colorScheme.primary,
             modifier = Modifier
-                .height(80.dp)
+                .height(96.dp)
                 .weight(1f)
         ) {
             Text(
                 text = message,
                 style = MaterialTheme.typography.displaySmall,
                 modifier = Modifier
-                    .padding(12.dp)
+                    .padding(8.dp)
             )
         }
     }
