@@ -7,11 +7,14 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.gym4jim.classes.Exercise
 import com.example.gym4jim.ui.components.*
 
 @Composable
 fun ExerciseScreen(
     exerciseViewModel: ExerciseViewModel,
+    onPhotoClicked: (Int) -> Unit,
+    onVideoClicked: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val exercise = exerciseViewModel.getCurrentExercise();
@@ -23,7 +26,10 @@ fun ExerciseScreen(
     ) {
         ExerciseHeader(title = exercise.name)
 
-        PhotoCarousel(imageResIds = exercise.image_files)
+        PhotoCarousel(
+            imageResIds = exercise.image_files,
+            onPhotoClicked = onPhotoClicked
+        )
 
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -31,7 +37,10 @@ fun ExerciseScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        VideoPlayer(videoResId = exercise.video_file)
+        VideoPlayer(
+            videoResId = exercise.video_file,
+            onVideoClicked = onVideoClicked
+        )
 
         Spacer(modifier = Modifier.height(16.dp))
 

@@ -3,6 +3,7 @@ package com.example.gym4jim.ui.components
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
@@ -19,6 +20,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun PhotoCarousel(
     @DrawableRes imageResIds: List<Int>,
+    onPhotoClicked: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val pagerState = rememberPagerState(pageCount = { imageResIds.size })
@@ -35,14 +37,20 @@ fun PhotoCarousel(
                 .clip(RectangleShape)
                 .background(MaterialTheme.colorScheme.tertiary)
         ) { page ->
-            Image(
-                painter = painterResource(id = imageResIds[page]),
-                contentDescription = null,
+            Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .clip(MaterialTheme.shapes.medium)
-                    .background(MaterialTheme.colorScheme.tertiary)
-            )
+                    .clickable { onPhotoClicked(imageResIds[page]) }
+            ) {
+                Image(
+                    painter = painterResource(id = imageResIds[page]),
+                    contentDescription = null,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(MaterialTheme.shapes.medium)
+                        .background(MaterialTheme.colorScheme.tertiary)
+                )
+            }
         }
 
         Row(

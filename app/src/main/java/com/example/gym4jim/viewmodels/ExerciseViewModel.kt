@@ -59,4 +59,28 @@ class ExerciseViewModel : ViewModel() {
         return exerciseState.value.currentExercise;
     }
 
+    fun getCurrentPhoto(): Int {
+        return exerciseState.value.currentPhoto;
+    }
+
+    fun onPhotoChosen(photo: Int){
+        _exerciseState.update { currentState ->
+            currentState.copy(
+                currentPhoto = photo
+            )
+        }
+    }
+
+    fun getCurrentVideo(): Int {
+        return exerciseState.value.currentVideo;
+    }
+
+    fun onVideoChosen(video: Int){
+        _exerciseState.update { currentState ->
+            currentState.copy(
+                currentVideo = video
+            )
+        }
+    }
+
 }

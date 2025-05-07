@@ -14,6 +14,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.gym4jim.ui.screens.CategoryMenuScreen
 import com.example.gym4jim.ui.screens.ExerciseMenuScreen
 import com.example.gym4jim.ui.screens.ExerciseScreen
+import com.example.gym4jim.ui.screens.FullScreenImageScreen
+import com.example.gym4jim.ui.screens.FullScreenVideoScreen
 import com.example.gym4jim.ui.screens.MotivationScreen
 
 @Composable
@@ -52,7 +54,12 @@ fun Gym4JimApp(
                 )
             }
             composable(AppScreens.Motivation.route) {
-                MotivationScreen()
+                MotivationScreen(
+                    onVideoClicked = {
+                        exerciseViewModel.onVideoChosen(it)
+                        navController.navigate(AppScreens.FullScreenVideo.route)
+                    }
+                )
             }
             composable(AppScreens.ExerciseMenu.route) {
                 ExerciseMenuScreen(
@@ -65,6 +72,24 @@ fun Gym4JimApp(
             }
             composable(AppScreens.Exercise.route) {
                 ExerciseScreen(
+                    exerciseViewModel = exerciseViewModel,
+                    onPhotoClicked = {
+                        exerciseViewModel.onPhotoChosen(it)
+                        navController.navigate(AppScreens.FullScreenPhoto.route)
+                    },
+                    onVideoClicked = {
+                        exerciseViewModel.onVideoChosen(it)
+                        navController.navigate(AppScreens.FullScreenVideo.route)
+                    }
+                )
+            }
+            composable(AppScreens.FullScreenPhoto.route) {
+                FullScreenImageScreen(
+                    exerciseViewModel = exerciseViewModel
+                )
+            }
+            composable(AppScreens.FullScreenVideo.route) {
+                FullScreenVideoScreen(
                     exerciseViewModel = exerciseViewModel
                 )
             }

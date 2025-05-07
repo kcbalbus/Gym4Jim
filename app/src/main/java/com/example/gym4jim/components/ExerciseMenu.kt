@@ -18,19 +18,27 @@ fun ExerciseMenu(
     exercises: List<Exercise>,
     onExerciseClick: (Exercise) -> Unit
 ) {
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(2),
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(0.dp),
-        horizontalArrangement = Arrangement.spacedBy(0.dp)
+    Column(
+        modifier = Modifier.fillMaxWidth()
     ) {
-        items(exercises) { exercise ->
-            ExerciseItemCard(
-                name = exercise.name,
-                imageResId = exercise.image_files[0],
-                onClick = { onExerciseClick(exercise) },
+        exercises.chunked(2).forEach { rowItems ->
+            Row(
                 modifier = Modifier.fillMaxWidth()
-            )
+            ) {
+                rowItems.forEach { exercise ->
+                    ExerciseItemCard(
+                        name = exercise.name,
+                        imageResId = exercise.image_files[0],
+                        onClick = { onExerciseClick(exercise) },
+                        modifier = Modifier
+                            .weight(1f)
+                    )
+                }
+
+                if (rowItems.size < 2) {
+                    Spacer(modifier = Modifier.weight(1f))
+                }
+            }
         }
     }
 }

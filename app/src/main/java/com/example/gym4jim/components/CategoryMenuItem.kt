@@ -10,13 +10,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.gym4jim.ui.theme.Gym4JimTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Person
 
 @Composable
-fun MenuItemCard(
+fun CategoryMenuItem(
     text: String,
     icon: ImageVector,
     onClick: () -> Unit,
@@ -27,7 +26,7 @@ fun MenuItemCard(
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.tertiary),
         modifier = modifier
             .fillMaxWidth()
-            .height(80.dp)
+            .height(110.dp)
             .clickable { onClick() }
     ) {
         Row(
@@ -40,7 +39,7 @@ fun MenuItemCard(
                 imageVector = icon,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onPrimary,
-                modifier = Modifier.size(36.dp)
+                modifier = Modifier.size(40.dp)
             )
 
             Spacer(modifier = Modifier.width(16.dp))
@@ -58,7 +57,7 @@ fun MenuItemCard(
 @Composable
 fun MenuItemCardPreview() {
     Gym4JimTheme {
-        MenuItemCard(
+        CategoryMenuItem(
             text = "Klatka piersiowa",
             icon = Icons.Default.Person,
             onClick = {}

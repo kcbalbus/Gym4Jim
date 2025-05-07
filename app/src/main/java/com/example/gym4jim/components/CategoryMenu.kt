@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.gym4jim.classes.Category
-import com.example.gym4jim.ui.components.MenuItemCard
+import com.example.gym4jim.ui.components.CategoryMenuItem
 import com.example.gym4jim.ui.theme.Gym4JimTheme
 
 
@@ -22,7 +22,7 @@ fun CategoryMenu(
             .fillMaxSize(),
     ) {
         categories.forEach { category ->
-            MenuItemCard(
+            CategoryMenuItem(
                 text = category.name,
                 icon = category.icon,
                 onClick = { onCategorySelected(category) }

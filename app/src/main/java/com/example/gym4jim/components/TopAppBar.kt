@@ -16,14 +16,15 @@ fun Gym4JimAppBar(
     navigateUp: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    if (canNavigateBack) {
-        TopAppBar(
-            title = { /* Brak tytułu */ },
-            colors = TopAppBarDefaults.mediumTopAppBarColors(
-                containerColor = MaterialTheme.colorScheme.primary
-            ),
-            modifier = modifier,
-            navigationIcon = {
+
+    TopAppBar(
+        title = {  },
+        colors = TopAppBarDefaults.mediumTopAppBarColors(
+            containerColor = MaterialTheme.colorScheme.primary
+        ),
+        modifier = modifier,
+        navigationIcon = {
+            if (canNavigateBack) {
                 IconButton(onClick = navigateUp) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
@@ -32,7 +33,7 @@ fun Gym4JimAppBar(
                     )
                 }
             }
-        )
-    }
+        }
+    )
 }
 

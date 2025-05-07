@@ -13,4 +13,7 @@ data class ExerciseState(
     val exercises: List<Exercise> = emptyList(),
     val currentCategory: Category = Category("", Icons.Filled.Category),
     val currentExercise: Exercise = Exercise("", "", emptyList(), 0, "", "", "", ""),
+    val currentPhoto: Int = 0,
+    val currentVideo: Int = 0
+
 )

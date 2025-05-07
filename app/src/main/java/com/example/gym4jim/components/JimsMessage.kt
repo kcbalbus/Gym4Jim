@@ -9,6 +9,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -37,7 +38,8 @@ fun JimsMessage(
                 .size(96.dp)
                 .clip(RoundedCornerShape(8.dp))
                 .border(
-                    BorderStroke(2.dp, Color.Black)
+                    BorderStroke(3.dp, Color.Black),
+                    shape = RoundedCornerShape(8.dp)
                 )
         )
 
@@ -50,12 +52,16 @@ fun JimsMessage(
                 .height(96.dp)
                 .weight(1f)
         ) {
-            Text(
-                text = message,
-                style = MaterialTheme.typography.displaySmall,
-                modifier = Modifier
-                    .padding(8.dp)
-            )
+            Box(
+                modifier = Modifier.fillMaxSize(),
+                contentAlignment = Alignment.CenterStart
+            ) {
+                Text(
+                    text = message,
+                    style = MaterialTheme.typography.bodySmall,
+                    modifier = Modifier.padding(10.dp)
+                )
+            }
         }
     }
 }

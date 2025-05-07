@@ -4,6 +4,8 @@
     <string name="exercise_menu_title">Choose Exercise</string>
     <string name="exercise_title">Exercise</string>
     <string name="motivation_title">Motivation</string>
+    <string name="full_screen_photo_title">Photo</string>
+    <string name="full_screen_video_title">Video</string>
     <string name="back_button">Back</string>
 
 </resources>
