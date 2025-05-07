@@ -13,7 +13,7 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
 
 @Composable
-fun ExerciseVideoPlayer(
+fun VideoPlayer(
     videoResId: Int,
     modifier: Modifier = Modifier
 ) {

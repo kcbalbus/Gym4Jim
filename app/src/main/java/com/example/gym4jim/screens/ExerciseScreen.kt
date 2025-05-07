@@ -31,7 +31,7 @@ fun ExerciseScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        ExerciseVideoPlayer(videoResId = exercise.video_file)
+        VideoPlayer(videoResId = exercise.video_file)
 
         Spacer(modifier = Modifier.height(16.dp))
 

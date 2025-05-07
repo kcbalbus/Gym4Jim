@@ -14,6 +14,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.gym4jim.ui.screens.CategoryMenuScreen
 import com.example.gym4jim.ui.screens.ExerciseMenuScreen
 import com.example.gym4jim.ui.screens.ExerciseScreen
+import com.example.gym4jim.ui.screens.MotivationScreen
 
 @Composable
 fun Gym4JimApp(
@@ -42,9 +43,16 @@ fun Gym4JimApp(
                     exerciseViewModel = exerciseViewModel,
                     onCategorySelected = {
                         exerciseViewModel.onCategoryChosen(it)
-                        navController.navigate(AppScreens.ExerciseMenu.route)
+                        if (it.name == "Motivation") {
+                            navController.navigate(AppScreens.Motivation.route)
+                        } else {
+                            navController.navigate(AppScreens.ExerciseMenu.route)
+                        }
                     }
                 )
+            }
+            composable(AppScreens.Motivation.route) {
+                MotivationScreen()
             }
             composable(AppScreens.ExerciseMenu.route) {
                 ExerciseMenuScreen(
