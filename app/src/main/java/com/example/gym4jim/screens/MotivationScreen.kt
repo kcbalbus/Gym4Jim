@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.gym4jim.ui.components.*
 import com.example.gym4jim.R
+import com.example.gym4jim.classes.allMotivationalAudio
 import com.example.gym4jim.classes.allMotivationalQuotes
 import java.time.LocalDate
 
@@ -17,7 +18,8 @@ fun MotivationScreen(
 ) {
     val dayOfMonth = LocalDate.now().dayOfMonth
     val dailyQuote = allMotivationalQuotes.get(dayOfMonth-1)
-    val videoId = R.raw.motivational_video
+    val videoId = R.raw.motivational_video_1
+    val audioId = allMotivationalAudio.get(dayOfMonth % allMotivationalAudio.size)
 
     Column(
         modifier = Modifier
@@ -43,7 +45,7 @@ fun MotivationScreen(
         Spacer(modifier = Modifier.height(12.dp))
 
         SubsectionHeader(title = "Audio of the Day")
-        AudioPlayer(audioResId = R.raw.motivational_audio)
+        AudioPlayer(audioResId = audioId)
 
         Spacer(modifier = Modifier.height(12.dp))
     }
